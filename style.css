@@ -18,10 +18,10 @@ main {
     flex: 1 0 auto;
 }
 
-/*!  styling for elements */
+
 
 button {
-    background-color: blue;
+    background-color: red;
     color: white;
     padding: 0.5rem 0.75rem;
     box-shadow: none;
@@ -32,7 +32,7 @@ button {
 }
 
 a {
-    color: blue;
+    color: rgba(255, 0, 0, 0.534);
 }
 
 header {
@@ -133,7 +133,7 @@ main #get_name_page #initials_input:focus {
 }
 
 main #highscore_page #highscore_list {
-    border: 2px solid blue;
+    border: 2px solid black;
     margin-bottom: 0.5rem;
 }
 
@@ -142,14 +142,14 @@ main #highscore_page #highscore_list div {
 }
 
 main #highscore_page #highscore_list div:nth-child(odd) {
-    background-color: rgb(163, 224, 245);
+    background-image: linear-gradient(purple, white);
 }
 
 main #highscore_page #highscore_list div:nth-child(even) {
-    background-color: lightsteelblue;
+    background-image: linear-gradient(white, purple);
 }
 
-/* ! Before Quiz Styling*/
+
 
 * {
     margin: 0;
