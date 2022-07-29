@@ -1,18 +1,22 @@
 var startBtn = document.getElementById("startbtn");
 var time = 90;
 var questionDisplay = document.getElementById('quiz-header') 
+var scoreDisplay = document.getElementById('score')
 var answer1 =document.getElementById('question1')
 var answer2 =document.getElementById('question2')
 var answer3 =document.getElementById('question3')
 var answer4 =document.getElementById('question4')
+var timer = document.getElementById('timer')
 var answerCorrectness = document.getElementById('right-wrong')
-
+var score = 0
 var questionAnswers = [
     answer1,
     answer2,
     answer3,
     answer4
 ]
+
+
 
 var questions = [
   {
@@ -37,7 +41,7 @@ var questions = [
   },
 ];
 
-let questionNumber = 0
+var questionNumber = 0
 
 function loadQuestion(question) {
     questionDisplay.textContent = question.question
@@ -58,23 +62,25 @@ function clickHandler(e) {
         answeredWrong()
     }
     questionNumber++;
+    scoreDisplay.textContent = score
     loadQuestion(questions[questionNumber])
 }
 
-function answeredCorrect {
-
+function answeredCorrect() {
+    score = score + 10
 }
 
-function answeredWrong {
-
+function answeredWrong() {
+    time = time - 10
 }
 
 function start() {
-  var timer = setInterval(function () {
+  var timerCountdown = setInterval(function () {
     time = time - 1;
     if (time <= 0) {
-      clearInterval(timer);
+      clearInterval(timerCountdown);
     } else {
+        timer.textContent = time
     }
   }, 1000);
 
