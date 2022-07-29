@@ -9,6 +9,8 @@ var answer4 =document.getElementById('question4')
 var timer = document.getElementById('timer')
 var answerCorrectness = document.getElementById('right-wrong')
 var initials = document.getElementById('initials')
+var submitCont = document.getElementById('submitcont')
+var questionCont = document.getElementById('questioncont')
 var score = 0
 var questionAnswers = [
     answer1,
@@ -96,6 +98,11 @@ function end() {
     
 }
 
+function addScore() {
+    var initialsSubmit = initials.value
+    localStorage.set(initialsSubmit, score)
+}
+
 function clickListeners() {
     for (var i = 0; i < questionAnswers.length; i++) {
         questionAnswers[i].addEventListener('click', clickHandler)
@@ -104,3 +111,4 @@ function clickListeners() {
 
 clickListeners()
 startBtn.addEventListener("click", start);
+document.getElementById('submitbtn').addEventListener('click', addScore)

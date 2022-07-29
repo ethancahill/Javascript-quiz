@@ -14,7 +14,7 @@
    <h2>Score:</h2>
    <h3 id="score">0</h3>
    <button  id="startbtn">Start</button>
-   <div>
+   <div id="questioncont" class="hidden">
      <h3 id="quiz-header">QUIZ</h3>
      <ul>
      <li data-answer='0' id ='question1'></li>
@@ -25,7 +25,11 @@
     <div>
       <h4 id="right-wrong"></h4>
     </div>
-    <input id="initial">
+    <div id="submitcont" class="hidden" >
+    <input id="initials">
+    <Button id="submitbtn">Submit Score</Button>
+  </div>
+  </Form>
    </div>
    <script src="./script.js"></script>
  </body>
