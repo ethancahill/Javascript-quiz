@@ -101,11 +101,14 @@ function end() {
     questionCont.classList.add('invisible')
     submitCont.classList.remove('invisible')
     submitCont.classList.add('visible')
+    startBtn.classList.add('invisible')
 }
 
 function addScore() {
     var initialsSubmit = initials.value
-    localStorage.set(initialsSubmit, score)
+    localStorage.setItem(initialsSubmit, score)
+    alert('Score Submitted')
+    location.reload()
 }
 
 function clickListeners() {
