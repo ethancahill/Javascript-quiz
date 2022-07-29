@@ -8,6 +8,7 @@ var answer3 =document.getElementById('question3')
 var answer4 =document.getElementById('question4')
 var timer = document.getElementById('timer')
 var answerCorrectness = document.getElementById('right-wrong')
+var initials = document.getElementById('initials')
 var score = 0
 var questionAnswers = [
     answer1,
@@ -62,8 +63,12 @@ function clickHandler(e) {
         answeredWrong()
     }
     questionNumber++;
+    if(questionNumber >= questions.length) {
+        time = 0
+    } else {
     scoreDisplay.textContent = score
     loadQuestion(questions[questionNumber])
+    }
 }
 
 function answeredCorrect() {
@@ -75,7 +80,7 @@ function answeredWrong() {
 }
 
 function start() {
-  var timerCountdown = setInterval(function () {
+  const timerCountdown = setInterval(function () {
     time = time - 1;
     if (time <= 0) {
       clearInterval(timerCountdown);
@@ -85,6 +90,10 @@ function start() {
   }, 1000);
 
   loadQuestion(questions[questionNumber])
+}
+
+function end() {
+    
 }
 
 function clickListeners() {
