@@ -86,16 +86,21 @@ function start() {
     time = time - 1;
     if (time <= 0) {
       clearInterval(timerCountdown);
+      end()
     } else {
         timer.textContent = time
     }
   }, 1000);
-
+  questionCont.classList.remove('invisible')
+  questionCont.classList.add('visible')
   loadQuestion(questions[questionNumber])
 }
 
 function end() {
-    
+    questionCont.classList.remove('visible')
+    questionCont.classList.add('invisible')
+    submitCont.classList.remove('invisible')
+    submitCont.classList.add('visible')
 }
 
 function addScore() {
