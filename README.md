@@ -5,6 +5,8 @@
 
   A simple quiz that stores highscores in local storage
   
+  <img width="1371" alt="Screen Shot 2022-07-29 at 10 46 20 AM" src="https://user-images.githubusercontent.com/99375366/181785445-7662f957-2ab6-4623-ba3e-9b4f10880dad.png">
+
 
   ## Table of Contents
 
