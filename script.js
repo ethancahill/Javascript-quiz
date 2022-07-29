@@ -1,8 +1,13 @@
 var startBtn = document.getElementById('startbtn')
 var time = 90
 function start() {
-    setInterval(function(){
+  var timer =  setInterval(function(){
         time = time - 1
+        if(time <= 0){
+            clearInterval()
+        } else {
+
+        }
     })
 }
 
